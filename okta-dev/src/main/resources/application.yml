@@ -1,0 +1,18 @@
+
+server:
+  port: 6070
+
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          okta-saml:
+            identityprovider:
+              entity-id: http://www.okta.com/exk5ldyxw0nTzYDay697
+              verification:
+                credentials:
+                - certificate-location: "classpath:okta.crt"
+              singlesignon:
+                url: https://securelogin.motherson.com/app/mothersongroup_mtslcps_1/exk5ldyxw0nTzYDay697/sso/saml
+                sign-request: false
